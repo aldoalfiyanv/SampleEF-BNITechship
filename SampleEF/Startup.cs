@@ -47,7 +47,7 @@ namespace SampleEF
             services.AddDbContext<SampleApiDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            //MENAMBAHKAN IDENTITY
+            //MENAMBAHKAN IDENTITY.
             services.AddIdentity<IdentityUser, IdentityRole>(options => {
                 options.Password.RequiredLength = 8;
                 options.Password.RequireLowercase = true;
